@@ -2,8 +2,6 @@ import ProgressBar from "Component/ProgressBar/ProgressBar.component";
 import ProgressBars from "Component/ProgressBars/ProgressBars.component";
 import { Checkout as SourceCheckout } from "SourceRoute/Checkout/Checkout.component";
 
-// export class Checkout extends SourceCheckout {}
-
 export class Checkout extends SourceCheckout {
   componentDidUpdate(prevProps) {
     const { checkoutStep } = this.props;
@@ -12,7 +10,7 @@ export class Checkout extends SourceCheckout {
       this.updateHeader();
     }
   }
-  // updates the page title based on the current step
+
   updateHeader() {
     const {
       setHeaderState, // function to update the state of the header

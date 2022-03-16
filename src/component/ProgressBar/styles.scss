@@ -30,6 +30,9 @@
 
 .active-color-bg {
   background-color: var(--primary-base-color);
+  animation-name: example;
+  animation-duration: 2s;
+  animation-direction: alternate;
 }
 .active-color-text {
   color: white;
@@ -44,6 +47,11 @@
   color: var(--secondary-dark-color);
 }
 
-// .active-txt-dark{
-//   color:
-// }
+@keyframes example {
+  from {
+    background-color: var(--secondary-base-color);
+  }
+  to {
+    background-color: var(--primary-base-color);
+  }
+}
