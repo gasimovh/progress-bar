@@ -2,13 +2,6 @@ import { PureComponent } from "react";
 import "./styles.scss";
 
 export class ProgressBar extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bruh: ""
-    };
-  }
-
   render() {
     const { stepNumber, stepTitle, stepComplete, isLastStep } = this.props;
     return (

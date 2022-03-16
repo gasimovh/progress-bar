@@ -12,17 +12,13 @@ export class Checkout extends SourceCheckout {
   }
 
   updateHeader() {
-    const {
-      setHeaderState, // function to update the state of the header
-      checkoutStep // one of SHIPPING_STEP, BILLING_STEP, DETAILS_STEP
-    } = this.props;
+    const { setHeaderState, checkoutStep } = this.props;
     const { title = "" } = this.stepMap[checkoutStep];
     setHeaderState({ title });
   }
   renderTitle() {
     const { checkoutStep } = this.props;
     const { title = "" } = this.stepMap[checkoutStep];
-    // same rendering logic for all steps
     return (
       <h1 block="Checkout" elem="Title">
         {title}
@@ -85,5 +81,4 @@ export class Checkout extends SourceCheckout {
   }
 }
 
-// we now export the extended and modified version of the class
 export default Checkout;
